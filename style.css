@@ -4,17 +4,24 @@
     --primary-color: #F8CB2E;
     --secondary-color: #EE5007;
     --hover-color: #c01f27;
-    --p-color:#939393;
+    --p-color: #939393;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /* reset */
-html{
+html {
     scroll-behavior: smooth;
 }
 
-.p-color{
-    color: #939393!important;
+.p-color {
+    color: #939393 !important;
 }
+
 .color-white {
     color: var(--white-color);
 }
@@ -46,9 +53,10 @@ i {
     /* Set the icon size (adjust as needed) */
 }
 
-a:hover{
+a:hover {
     text-decoration: none !important;
 }
+
 /* end reset */
 
 /* custom icon */
@@ -96,7 +104,7 @@ a:hover{
 /* end custom icon */
 
 /* custom btn */
-    /* .btn-cirle{
+/* .btn-cirle{
         border-radius: 50%!important;
     } */
 
@@ -146,19 +154,14 @@ a:hover{
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
     z-index: 1;
     overflow: hidden;
-}
-
-.video__banner video {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
-.btn-cate{
+.btn-cate {
     font-weight: 600;
     color: var(--p-color);
     border-radius: 5rem;
@@ -167,9 +170,29 @@ a:hover{
     margin: 5px;
 }
 
-.btn-cate:hover{
+.btn-cate:hover {
     background-color: var(--secondary-color);
     text-transform: none;
 }
 
+#video_background {
 
+    position: absolute;
+
+    bottom: 0px;
+
+    right: 0px;
+
+    min-width: 100%;
+
+    min-height: 100%;
+
+    width: auto;
+
+    height: auto;
+
+    z-index: -1000;
+
+    overflow: hidden;
+
+}

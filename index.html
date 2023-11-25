@@ -64,9 +64,13 @@
                 </div>
             </div>
         </div>
-        <div class="video__banner">
-            <video src="banner.mp4" autoplay loop></video>
-        </div>
+
+        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
+            <source src="banner.mp4" type="video/mp4" />
+        </video>
+
+
+
     </section>
     <!-- !video banner -->
 
@@ -159,13 +163,12 @@
         </div>
     </div>
 
-    <div class="container p-5 color-white"
-        style="background-image: url(/baner.jpg);
+    <div class="container p-5 color-white" style="background-image: url(/baner.jpg);
         background-attachment: fixed;
         background-position:center; background-repeat: no-repeat;">
         <h3 style="font-weight: bold;">Chốt Deal</h3>
         <p><small>Những mẫu độc đáo được cập nhật liên tục</small></p>
-    </div> 
+    </div>
 
     <div class="container mt-5">
 
@@ -314,6 +317,8 @@
         <!-- Footer -->
 
 
+        
+
 
 
 
@@ -332,6 +337,15 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
         <!-- !bootstrap -->
+
+        <script>
+            var youtubeIframe = document.getElementById("youtube-iframe");
+
+            youtubeIframe.addEventListener("ended", function () {
+                // Tải lại video khi kết thúc
+                youtubeIframe.contentWindow.location.reload(true);
+            });
+        </script>
 </body>
 
 </html>
